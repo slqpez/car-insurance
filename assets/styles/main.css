@@ -1,0 +1,101 @@
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ab92bf;
+  height: 500px;
+  margin: 50px auto;
+  width: 70%;
+  -webkit-box-shadow: 1px 1px 5px 2px black;
+          box-shadow: 1px 1px 5px 2px black;
+}
+
+.form-container .card {
+  padding: 20px;
+  background: #655a7c;
+  height: 90%;
+  width: 90%;
+  position: relative;
+}
+
+.form-container .card label {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.form-container .card label,
+.form-container .card p {
+  font-weight: bold;
+  display: block;
+}
+
+.form-container .card #model-input {
+  margin-top: 10px;
+  display: none;
+}
+
+.form-container .card .btn {
+  margin-top: 20px;
+  border: none;
+  width: 150px;
+  margin-top: 30px;
+  height: 40px;
+  font-weight: 900;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 5px #ab92bf;
+  border-radius: 500px;
+  background: #afc1d6;
+  color: #cef9f2;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 2px 2px 5px 1px #ab92bf;
+          box-shadow: 2px 2px 5px 1px #ab92bf;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.form-container .card .btn:hover {
+  background: #ab92bf;
+  -webkit-box-shadow: 2px 2px 5px 1px #cef9f2;
+          box-shadow: 2px 2px 5px 1px #cef9f2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header {
+  background: #655a7c;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 2px solid #ab92bf;
+  -webkit-box-shadow: 3px 1px 5px 1px black;
+          box-shadow: 3px 1px 5px 1px black;
+}
+
+header h1 {
+  text-shadow: 1px 1px 3px #000;
+  font-size: 2.5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #afc1d6;
+  height: 100vh;
+  color: #ab92bf;
+  font-size: 18px;
+}
+/*# sourceMappingURL=main.css.map */

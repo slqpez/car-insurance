@@ -1,0 +1,63 @@
+@import "variables";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $form-bg;
+  height: 500px;
+  margin: 50px auto;
+  width: 70%;
+  box-shadow: 1px 1px 5px 2px black;
+
+  .card {
+    padding: 20px;
+    background: $card-bg;
+    height: 90%;
+    width: 90%;
+    position: relative;
+
+    label {
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    label,
+    p {
+      font-weight: bold;
+      display: block;
+    }
+
+    #model-input {
+      margin-top: 10px;
+      display: none;
+    }
+    .btn {
+      margin-top: 20px;
+      border: none;
+      width: 150px;
+      margin-top: 30px;
+      height: 40px;
+      font-weight: 900;
+      font-size: 1.1em;
+      text-shadow: 2px 2px 5px $form-bg;
+      border-radius: 500px;
+      background: #afc1d6;
+      color: $btn-bg;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      letter-spacing: 2px;
+      box-shadow: 2px 2px 5px 1px $form-bg;
+      transform: translateX(-50%);
+
+      &:hover {
+        background: $form-bg;
+        box-shadow: 2px 2px 5px 1px $btn-bg;
+        transition: 0.5s;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "Sass/variables";
+@import "Sass/form";
+@import "Sass/header";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg;
+  height: 100vh;
+  color: $text-color;
+  font-size: 18px;
+}

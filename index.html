@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/main.css" />
-    <title>Car insurance</title>
+    <title>Seguros Slqpez</title>
   </head>
-  <body></body>
-  <script src="assets/js/app.js"></script>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="" alt="" />
+      </div>
+      <h1>Seguro para tu auto</h1>
+    </header>
+    <div class="form-container">
+      <div class="card">
+        <form action="#">
+          <label for="model">Modelo:</label>
+          <select name="models" id="models" required>
+            <option value="defaulto">--Seleccione uno--</option>
+            <option value="Americano">Americano</option>
+            <option value="Europeo">Europeo</option>
+            <option value="Asiático">Asiático</option>
+            <input type="text" id="model-input" />
+          </select>
+
+          <label for="year">Año:</label>
+          <select name="year" id="year">
+            <option value="defaulto">--Seleccione uno--</option>
+          </select>
+
+          <p>Tipo de seguro:</p>
+          <input type="radio" name="type-s" id="basic" value="basic" />
+          <label for="basic">Básico</label>
+          <input type="radio" name="type-s" id="full" value="full" />
+          <label for="basic">Completo</label>
+
+          <button type="submit" class="btn">Cotizar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="assets/js/app.js"></script>
 </html>
