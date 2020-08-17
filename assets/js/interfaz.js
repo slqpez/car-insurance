@@ -4,8 +4,6 @@ function Interfaz() {
   this.type;
 }
 
-const typeS = document.querySelectorAll("input[name='type-s']");
-
 Interfaz.prototype.recolectarDatos = function () {
   const model = document.querySelector("#models");
   const year = document.querySelector("#year");
@@ -26,3 +24,18 @@ Interfaz.prototype.recolectarDatos = function () {
 
   return [this.models, this.year, this.type];
 };
+
+export { Interfaz };
+
+Interfaz.prototype.mostrarMsg = function () {
+  const form = document.querySelector("form");
+  const datos = this.recolectarDatos();
+  for (let i = 0; i <= datos.length; i++) {
+    if (datos[i] === undefined) {
+      console.log("hey");
+      break;
+    } else console.log("no");
+  }
+};
+
+/* TODO Hacer el ciclo para mostrar el mensaje de error. */
