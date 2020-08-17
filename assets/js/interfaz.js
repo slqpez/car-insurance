@@ -25,17 +25,32 @@ Interfaz.prototype.recolectarDatos = function () {
   return [this.models, this.year, this.type];
 };
 
-export { Interfaz };
-
+Interfaz.prototype.isComplete = function () {
+  const datos = this.recolectarDatos();
+  const data = (currentValue) => currentValue !== undefined;
+  const completeData = datos.every(data);
+  return completeData;
+};
 Interfaz.prototype.mostrarMsg = function () {
   const form = document.querySelector("form");
-  const datos = this.recolectarDatos();
-  for (let i = 0; i <= datos.length; i++) {
-    if (datos[i] === undefined) {
-      console.log("hey");
-      break;
-    } else console.log("no");
+
+  if (!this.isComplete()) {
+    const formChildren = Array.from(form.children);
+    formChildren.forEach((children) => {
+      if (children.classList.contains("error")) {
+        children.style.display = "none";
+      }
+    });
+
+    const msg = document.createElement("div");
+    msg.classList = "error";
+    msg.textContent = "Faltan datos. 🙁";
+    form.insertBefore(msg, document.querySelector("#models"));
+
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 2000);
   }
 };
 
-/* TODO Hacer el ciclo para mostrar el mensaje de error. */
+export { Interfaz };
