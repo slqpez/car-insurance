@@ -24,9 +24,31 @@
   position: relative;
 }
 
-.form-container .card label {
-  color: red;
+.form-container .card select {
+  background: #ab92bf;
+  width: 50%;
+  height: 30px;
   margin-bottom: 10px;
+}
+
+.form-container .card select option {
+  height: 60px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.form-container .card select option:hover {
+  background: red;
+}
+
+.form-container .card label {
+  color: #ab92bf;
+  margin-bottom: 10px;
+}
+
+.form-container .card p {
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .form-container .card label,
@@ -35,9 +57,9 @@
   display: block;
 }
 
-.form-container .card #model-input {
-  margin-top: 10px;
-  display: none;
+.form-container .card #basic,
+.form-container .card #full {
+  display: inline;
 }
 
 .form-container .card .btn {
