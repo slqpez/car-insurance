@@ -1,3 +1,5 @@
+import { Quot } from "./quot.js";
+
 function Interfaz() {
   this.model;
   this.year;
@@ -44,9 +46,32 @@ Interfaz.prototype.getType = function () {
   return this.typeS;
 };
 
+Interfaz.prototype.showQuot = function (model, year, type, total) {
+  const form = document.querySelector("form");
+
+  if (!document.querySelector(".quot-msg")) {
+    const quotDiv = document.createElement("div");
+    quotDiv.classList.add("quot-msg");
+    quotDiv.innerHTML = `<p>Modelo: ${model}</p>
+  <p>Año: ${year}</p>
+  <p>Tipo de seguro: ${type}</p>
+  <p>Valor total: ${total}</p>`;
+    form.insertBefore(quotDiv, document.querySelector(".btn"));
+    console.log("what");
+  } else {
+  }
+};
+
 Interfaz.prototype.generateQuot = function () {
   if (this.isComplete()) {
-    console.log("Nueva cotización");
+    this.showMsg("Cotizando", "complete");
+    const model = this.getModel();
+    const year = this.getYear();
+    const typeS = this.getType();
+    const quot = new Quot(model, year, typeS);
+    const totalValue = quot.getQuot();
+    this.showQuot(model, year, typeS, totalValue);
+    console.log(totalValue);
   } else {
     this.showMsg("Faltan datos.", "error");
   }

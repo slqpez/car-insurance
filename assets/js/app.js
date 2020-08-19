@@ -1,2 +1,3 @@
 import "./section.js";
-import "./Interfaz.js";
+import "./interface.js";
+import "./quot.js";
