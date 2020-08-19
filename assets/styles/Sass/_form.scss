@@ -6,7 +6,7 @@
   align-items: center;
 
   background: $form-bg;
-  height: 500px;
+  height: 700px;
   margin: 50px auto;
   width: 70%;
   box-shadow: 1px 1px 5px 2px black;
@@ -23,11 +23,13 @@
       width: 50%;
       height: 30px;
       margin-bottom: 10px;
+      cursor: pointer;
 
       option {
         height: 60px;
         font-weight: bold;
         font-size: 1.2em;
+        cursor: pointer;
 
         &:hover {
           background: red;
@@ -53,6 +55,13 @@
     #basic,
     #full {
       display: inline;
+    }
+
+    iframe {
+      width: 200px;
+      height: 200px;
+      display: none;
+      margin: 30px auto;
     }
 
     .btn {

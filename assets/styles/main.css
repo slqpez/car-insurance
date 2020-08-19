@@ -9,7 +9,7 @@
       -ms-flex-align: center;
           align-items: center;
   background: #ab92bf;
-  height: 500px;
+  height: 700px;
   margin: 50px auto;
   width: 70%;
   -webkit-box-shadow: 1px 1px 5px 2px black;
@@ -29,12 +29,14 @@
   width: 50%;
   height: 30px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .form-container .card select option {
   height: 60px;
   font-weight: bold;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 .form-container .card select option:hover {
@@ -60,6 +62,13 @@
 .form-container .card #basic,
 .form-container .card #full {
   display: inline;
+}
+
+.form-container .card iframe {
+  width: 200px;
+  height: 200px;
+  display: none;
+  margin: 30px auto;
 }
 
 .form-container .card .btn {
@@ -131,8 +140,13 @@ header h1 {
 
 .quot-msg {
   color: black;
-  margin: 20px;
+  margin: 10px auto;
   background: grey;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  height: 200px;
+  border: 2px solid black;
 }
 
 * {
