@@ -1,4 +1,6 @@
 import "./section.js";
+import "./quot.js";
+import "./interface.js";
 import { Interfaz } from "./interface.js";
 
 const form = document.querySelector("form");
