@@ -47,6 +47,7 @@ Interfaz.prototype.getType = function () {
 };
 
 Interfaz.prototype.createMsg = function (model, year, type, total) {
+  const form = document.querySelector("form");
   const quotDiv = document.createElement("div");
   quotDiv.classList.add("quot-msg");
   quotDiv.innerHTML = `<p>Modelo: ${model}</p>
@@ -57,8 +58,6 @@ Interfaz.prototype.createMsg = function (model, year, type, total) {
 };
 
 Interfaz.prototype.showQuot = function (model, year, type, total) {
-  const form = document.querySelector("form");
-
   if (!document.querySelector(".quot-msg")) {
     setTimeout(() => {
       this.createMsg(model, year, type, total);
@@ -94,12 +93,5 @@ Interfaz.prototype.generateQuot = function () {
     this.showMsg("Faltan datos.", "error");
   }
 };
-
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  const test = new Interfaz();
-  test.generateQuot();
-  e.preventDefault();
-});
 
 export { Interfaz };

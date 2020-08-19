@@ -90,5 +90,8 @@
         transition: 0.5s;
       }
     }
+    @media (max-width: 356px) {
+      font-size: 0.7em;
+    }
   }
 }

@@ -1,5 +1,6 @@
 .quot-msg {
   color: black;
+  text-align: center;
   margin: 10px auto;
   background: grey;
   padding: 10px;
@@ -7,4 +8,12 @@
   width: 50%;
   height: 200px;
   border: 2px solid black;
+
+  @media screen and (max-width: 740px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 0.7em;
+    width: 90%;
+  }
 }

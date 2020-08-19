@@ -102,6 +102,12 @@
   transition: 0.5s;
 }
 
+@media (max-width: 356px) {
+  .form-container .card {
+    font-size: 0.7em;
+  }
+}
+
 header {
   background: #655a7c;
   text-align: center;
@@ -114,6 +120,12 @@ header {
 header h1 {
   text-shadow: 1px 1px 3px #000;
   font-size: 2.5em;
+}
+
+@media (max-width: 483px) {
+  header h1 {
+    font-size: 1.6em;
+  }
 }
 
 .error {
@@ -140,6 +152,7 @@ header h1 {
 
 .quot-msg {
   color: black;
+  text-align: center;
   margin: 10px auto;
   background: grey;
   padding: 10px;
@@ -147,6 +160,19 @@ header h1 {
   width: 50%;
   height: 200px;
   border: 2px solid black;
+}
+
+@media screen and (max-width: 740px) {
+  .quot-msg {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .quot-msg {
+    font-size: 0.7em;
+    width: 90%;
+  }
 }
 
 * {
